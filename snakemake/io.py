@@ -1561,7 +1561,7 @@ def _load_configfile(configpath, filetype="Config"):
     import yaml
 
     try:
-        with open(configpath) as f:
+        with open(configpath, encoding='utf8') as f:
             try:
                 return json.load(f, object_pairs_hook=collections.OrderedDict)
             except ValueError:
